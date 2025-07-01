@@ -1,4 +1,4 @@
-section {
+.plantsCatalogue {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -10,6 +10,7 @@ section {
 .plantItem {
   flex: 1;
   min-width: 150px;
+  max-width: 200px;
 
   display: flex;
   flex-direction: column;
@@ -24,6 +25,10 @@ section {
 
 .plantName {
   margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  align-self: flex-start;
+  margin-left: 0.5rem;
 }
 
 .plantItem button {
