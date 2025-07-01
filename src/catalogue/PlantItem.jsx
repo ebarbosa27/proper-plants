@@ -1,8 +1,8 @@
-export default function PlantItem() {
+export default function PlantItem({ name, image }) {
   return (
-    <div>
-      <img src="" alt="" />
-      <p></p>
+    <div className="plantItem">
+      <p className="plantImage">{image}</p>
+      <p className="plantName">{name}</p>
       <button>Add to cart</button>
     </div>
   );
