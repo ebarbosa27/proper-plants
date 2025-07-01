@@ -1,3 +1,9 @@
+import CartItem from "./CartItem";
+
 export default function CartContainer() {
-  return <section></section>;
+  return (
+    <section>
+      <CartItem />
+    </section>
+  );
 }
