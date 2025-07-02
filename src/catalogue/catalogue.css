@@ -3,8 +3,7 @@
   flex-wrap: wrap;
   justify-content: start;
   gap: 1rem;
-
-  width: 60%;
+  width: 100%;
 }
 
 .plantItem {
