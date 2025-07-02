@@ -1,9 +1,15 @@
-export default function PlantItem({ name, image }) {
+export default function PlantItem({ plant, addItemToCart }) {
   return (
     <div className="plantItem">
-      <p className="plantImage">{image}</p>
-      <p className="plantName">{name}</p>
-      <button>Add to cart</button>
+      <p className="plantImage">{plant.image}</p>
+      <p className="plantName">{plant.name}</p>
+      <button
+        onClick={() => {
+          addItemToCart(plant);
+        }}
+      >
+        Add to cart
+      </button>
     </div>
   );
 }

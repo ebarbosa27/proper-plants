@@ -1,13 +1,13 @@
 import PlantItem from "./PlantItem";
 import "./catalogue.css";
 
-export default function PlantsContainer({ plants }) {
+export default function PlantsContainer({ plants, addItemToCart }) {
   return (
     <section>
       <h2>Plants</h2>
       <div className="plantsCatalogue">
         {plants.map((plant) => {
-          return <PlantItem name={plant.name} image={plant.image} key={plant.id} />;
+          return <PlantItem plant={plant} addItemToCart={addItemToCart} key={plant.id} />;
         })}
       </div>
     </section>
