@@ -11,11 +11,9 @@ main {
 }
 
 .PlantSection {
-  background-color: lightblue;
   flex: 3;
 }
 
 .CartSection {
-  background-color: lightcoral;
   flex: 2;
 }

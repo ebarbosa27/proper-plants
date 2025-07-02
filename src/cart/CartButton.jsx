@@ -1,9 +1,9 @@
-export default function CartButton() {
+export default function CartButton({ cartItem, addItemToCart, removeItemFromCart }) {
   return (
-    <div>
-      <button></button>
-      <span></span>
-      <button></button>
+    <div className="cartOptions">
+      <button onClick={() => removeItemFromCart(cartItem.plant)}>-</button>
+      <span>{cartItem.quantity}</span>
+      <button onClick={() => addItemToCart(cartItem.plant)}>+</button>
     </div>
   );
 }

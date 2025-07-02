@@ -1,0 +1,29 @@
+.cartItem {
+  width: 100%;
+  padding: 0.2rem;
+  font-size: 18px;
+}
+
+.cartText span {
+  font-size: 25px;
+}
+
+.cartOptions {
+  display: flex;
+  align-items: center;
+}
+
+.cartOptions button {
+  width: 6rem;
+  height: 2.5rem;
+  font-size: 18px;
+}
+
+.cartOptions button:hover {
+  cursor: pointer;
+}
+
+.cartOptions span {
+  flex: 1;
+  text-align: center;
+}
