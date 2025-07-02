@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PlantsContainer from "./catalogue/PlantsContainer";
+import CartContainer from "./cart/CartContainer.jsx";
 import { PLANTS } from "./data.js";
 import "./app.css";
 
@@ -32,13 +33,29 @@ export default function App() {
     setCart(newCart);
   }
 
-  // function removeItemFromCart(item) {}
+  function removeItemFromCart(plant) {
+    const newCart = cart.filter((cartItem) => {
+      if (cartItem.plant.id === plant.id) {
+        cartItem.quantity--;
+        if (cartItem.quantity === 0) {
+          return;
+        }
+      }
+      return cartItem;
+    });
+    setCart(newCart);
+  }
 
   return (
     <>
       <h1>Proper Plants</h1>
       <main>
         <PlantsContainer plants={PLANTS} addItemToCart={addItemToCart} />
+        <CartContainer
+          cart={cart}
+          addItemToCart={addItemToCart}
+          removeItemFromCart={removeItemFromCart}
+        />
       </main>
     </>
   );
